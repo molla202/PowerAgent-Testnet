@@ -140,6 +140,8 @@ http://my.dappnode/#/installer/%2Fipfs%2FQmP55bcEhtWtrbiueisuoZx4XN5AeLsuvtKU6CF
 
 👉 Max Priority Fee Per Gas : 60,000
 
+👉 Not: bilgisayara indirdiğimiz utc dosyasını isteyebilir bi yerde :D
+
 - Sumbit diyoruz. yukleme bittikten sonra gelen ekranda enable diyoruz.
 - Sol kısımdan dashborada geliyoruz.
 - Ekranda sepolia geth sync olmasını bekliyoruz.
