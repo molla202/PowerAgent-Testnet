@@ -18,17 +18,27 @@
 ### Not: Dikkat ediniz.
  - cosmos harici çalışan bir proje varsa yuksek ihtimalle portlarda sorun çıkar.
 ## Kütüphane ve gerekli yazılımları kuralım.
+```
 sudo wget -O - https://prerequisites.dappnode.io | sudo bash
+```
 ## Oto Kurulum Script
+```
 sudo wget -O - https://installer.dappnode.io | sudo bash
+```
 ## Profil oluşturuyoruz.
+```
 source /usr/src/dappnode/DNCORE/.dappnode_profile
+```
 ## Çalışanma durumunu kontrol edelim.
+```
 dappnode_status
-## vpn için bilgilerini alalım.
+```
+## Vpn için bilgilerini alalım.
+```
 dappnode_wireguard
-not: çıkan çıktıyı bir metin belgesine kaydedin.
-## vpn bağlantısı için kendi bilgisayarımıza programı indirelim.
+```
+#### Not: çıkan çıktıyı bir metin belgesine kaydedin.
+## Vpn bağlantısı için kendi bilgisayarımıza programı indirelim.
 Windows
 https://download.wireguard.com/windows-client/wireguard-installer.exe
 
@@ -53,25 +63,41 @@ not: şifre sayılar ve bir buyuk harf olması gerekiyor. onaylamadan sonra bilg
 
 - Sunucumuza donuyoruz.
 ## Sırayla kuralım.
+```
 sudo apt update
+```
+```
 sudo apt install nodejs
+```
+```
 sudo apt install npm
+```
+```
 sudo apt install git
-## key olusturma işlemleri.
+```
+## Key olusturma işlemleri.
+```
 git clone https://github.com/powerpool-finance/powerpool-agent-v2-compose
+```
+```
 cd powerpool-agent-v2-compose
+```
+```
 npm i
-not: sırayla yapıyoruz. ve en son aşağıdaki kodu düzenleyip giriyoruz. %worker_private_key% yerine yeni açtığımız bir metamask cüzdanının private keyini yazıyoruz. %password% kısmınada bir şifre belirliyoruz.
+```
+### Not: sırayla yapıyoruz. ve en son aşağıdaki kodu düzenleyip giriyoruz. %worker_private_key% yerine yeni açtığımız bir metamask cüzdanının private keyini yazıyoruz. %password% kısmınada bir şifre belirliyoruz.
+```
 node jsongen.js %worker_private_key% %password%
-
+```
 - sonunda bize bir dosya olusturucak bunu kendi pc mizede yedekliyelim. çünkü lazım olucak :D
 /root/powerpool-agent-v2-compose/keys/
 yoluna gidiyoruz ve içinde utc ile baslayan dosyayı pcmize kopyalıyoruz.
+
 ## my.dappnode sayfamıza geri dönüyoruz.
 
 - tarayıcımızda aşağıdaki adrese gidiyoruz.
 - sağ taraftaki advanced optionsa tıklayalım. aşağıdaki resimde göründüğü gibi bypass kısmını aktif ediyoruz. update yazan kısım sizde install yazıcak tıklayın. sonra submit en aşağıya in accept. kurulumun bitmesini bekleyin en son ekrana gelen mesajda enable deyin.
-- 
+
 🟪 Prysm Sepolia DAppNode package:
 http://my.dappnode/#/installer/%2Fipfs%2FQmT2vSKsKVTs7oFxYnnzb8cpWiKnMDvPLy1qnaLWfEfVkD
 
@@ -95,15 +121,24 @@ http://my.dappnode/#/installer/%2Fipfs%2FQmP55bcEhtWtrbiueisuoZx4XN5AeLsuvtKU6CF
 - adresine gidelim.sağ taraftaki advanced optionsa tıklayalım. açılan kısımdan bypass aktif edelim. sağdan instal diyelim.
 ![image](https://github.com/molla202/PowerAgent-Testnet/assets/91562185/335e3a1f-54ad-4a0f-bb2d-e769b2defdf3)
 
-- gelen ekranda 
-worker adress : mm yeni cüzdan olusturup private key almıstık hatırlarsınız. (umarım :D ) onun mm adresini buraya yazıyoruz.
-worker keyfile pass: node jsongen.js %worker_private_key% %password% bu kodu duzenlerken olusturduğumuz şifreyi yazıcaz buraya.
-Network : sepolia seçiyoruz.
-execution clint rpc : ws://sepolia-geth.dappnode:8546
-Agent address : 0x4d9bC98452820FD96B2C31741e8C4DdcC795bEce
-Accrue reward on poweragent address : true
-Execute tasks when block base fee is greater than max base fee : true
-Max Priority Fee Per Gas : 60,000
+- Gelen ekranda
+ 
+👉 worker adress : mm yeni cüzdan olusturup private key almıstık hatırlarsınız. (umarım :D ) onun mm adresini buraya yazıyoruz.
+
+👉 worker keyfile pass: node jsongen.js %worker_private_key% %password% bu kodu duzenlerken olusturduğumuz şifreyi yazıcaz buraya.
+
+👉 Network : sepolia seçiyoruz.
+
+👉 execution clint rpc : ws://sepolia-geth.dappnode:8546
+
+👉 Agent address : 0x4d9bC98452820FD96B2C31741e8C4DdcC795bEce
+
+👉 Accrue reward on poweragent address : true
+
+👉 Execute tasks when block base fee is greater than max base fee : true
+
+👉 Max Priority Fee Per Gas : 60,000
+
 - sumbit diyoruz. yukleme bittikten sonra gelen ekranda enable diyoruz.
 - sol kısımdan dashborada geliyoruz.
 - ekranda sepolia geth sync olmasını bekliyoruz.
