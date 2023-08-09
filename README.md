@@ -132,7 +132,7 @@ http://my.dappnode/#/installer/%2Fipfs%2FQmP55bcEhtWtrbiueisuoZx4XN5AeLsuvtKU6CF
 
 👉 Execution clint rpc : ws://sepolia-geth.dappnode:8546
 
-👉 Agent address : 0x4d9bC98452820FD96B2C31741e8C4DdcC795bEce
+👉 Agent address : 0xc8E864f12c337Bdf6294a3DCeE0E565D2B1B4d90
 
 👉 Accrue reward on poweragent address : true
 
