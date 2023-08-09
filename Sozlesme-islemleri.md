@@ -1,5 +1,5 @@
 ### Sepolia contract işlemleri.
-- test tokeni talep edelim öncelikle. tg grubundan. adres atıyoruz.
+- test tokeni talep edelim öncelikle. tg grubundan. adres atıyoruz. ( arkadaslar burda 2ci bir mm cüzdanı olusturuyoruz sepolia faucet alıyoruz sonra tg de bu adresi atıp test tokenlerini bu adrese istiyoruz. kontrak işlemlerinde bağlanırken bu 2ci olusturduğumuz adresle işlem yapacağız)
 ![image](https://github.com/molla202/PowerAgent-Testnet/assets/91562185/23c0a3a6-d5e6-402a-ae95-4f53867ad657)
 
 🔴 Test CVP Contract address: 0xD5134EcD90EB63276aF2Fca897cC04D845AfD74f
@@ -23,7 +23,7 @@ https://sepolia.etherscan.io/address/0xc8E864f12c337Bdf6294a3DCeE0E565D2B1B4d90
 
 - adrese gedelim. yine contract daha sonra write contract diyelim. alttaki resimdeki yere gelelim ve dolduralım.
 
-- worker_ (address) : cüzdan adresimiz. mmm
+- worker_ (address) : cüzdan adresimiz. mm sunucuda kurduğumuz ve utc dosyası aldığım adresi yazıyoruz
 - initialDepositAmount_ (uint256) : 1000000000000000000000
 
 ![image](https://github.com/molla202/PowerAgent-Testnet/assets/91562185/e8479f07-a1b5-4a77-8f4c-83ebd10997f3)
